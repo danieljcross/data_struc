@@ -34,10 +34,16 @@ public static class ArraysTester {
     /// integer greater than 0.
     /// </summary>
     /// <returns>array of doubles that are the multiples of the supplied number</returns>
+    // TODO Problem 1 Start (don't forget to fill out the 01-prove-response.docx)
     private static double[] MultiplesOf(double number, int length)
     {
-        // TODO Problem 1 Start (don't forget to fill out the 01-prove-response.docx)
-        return new double[0]; // replace this return statement with your own
+        List<double> returnList = new List<double>();
+        for (int x=1;x<=length;x++){
+            double addNumber = x * number;
+            returnList.Add(addNumber);
+        }
+
+        return returnList.ToArray(); // replace this return statement with your own
     }
     
     /// <summary>
