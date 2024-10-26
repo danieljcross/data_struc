@@ -14,6 +14,9 @@ public class Translator {
     /// <returns>fixed array of divisors</returns>
     public void AddWord(string fromWord, string toWord) {
         // Todo Problem 1 - ADD YOUR CODE HERE
+
+        _words.Add(fromWord, toWord);
+
     }
 
     /// <summary>
@@ -23,6 +26,12 @@ public class Translator {
     /// <returns>The translated word or "???" if no translation is available</returns>
     public string Translate(string fromWord) {
         // Todo Problem 1 - ADD YOUR CODE HERE
-        return "";
+
+        foreach (var word in _words){
+            if (word.Key == fromWord){
+                return word.Value;
+            }
+        }
+        return "???";
     }
 }
