@@ -91,13 +91,29 @@ public static class MapsTester {
     /// #############
     /// # Problem 2 #
     /// #############
+    /// 
+
+        // <Dictionary>{[Bachelors, 5355], [HS-grad, 10501], [11th, 1175],
+        // [Masters, 1723], [9th, 514], [Some-college, 7291], [Assoc-acdm, 1067],
+        // [Assoc-voc, 1382], [7th-8th, 646], [Doctorate, 413], [Prof-school, 576],
+        // [5th-6th, 333], [10th, 933], [1st-4th, 168], [Preschool, 51], [12th, 433]}
+
+
     private static Dictionary<string, int> SummarizeDegrees(string filename) {
         var degrees = new Dictionary<string, int>();
         foreach (var line in File.ReadLines(filename)) {
             var fields = line.Split(",");
             // Todo Problem 2 - ADD YOUR CODE HERE
-        }
 
+            string FourthItem = fields[3];
+
+            if (!degrees.Keys.Contains(FourthItem)){
+                degrees.Add(FourthItem,1);
+            }
+            else{
+                degrees[key:FourthItem] += 1;
+            }
+        }
         return degrees;
     }
 
