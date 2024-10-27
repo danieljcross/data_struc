@@ -1,3 +1,4 @@
+using System.ComponentModel;
 using System.Text.Json;
 
 namespace prove_06;
@@ -138,7 +139,35 @@ public static class MapsTester {
     /// #############
     private static bool IsAnagram(string word1, string word2) {
         // Todo Problem 3 - ADD YOUR CODE HERE
-        return false;
+
+        // Remove whitespace and make lower case
+        word1 = word1.Replace(" ","");
+        word2 = word2.Replace(" ","");
+        word1 = word1.ToLower();
+        word2 = word2.ToLower();
+
+        // Take letters out of word2 if equal
+        foreach (char letter1 in word1){
+            if (word2.Contains(letter1)){
+                foreach (char letter in word2){
+                    if (letter == letter1){
+                        int index = word2.IndexOf(letter);
+                        word2 = word2.Remove(index, 1);
+                        break;
+                    }
+                }
+            }
+
+            else{
+                return false;
+            }
+        }
+
+        // Compare what is left
+        if (word2 != ""){
+            return false;
+        }
+        return true;
     }
 
     /// <summary>
