@@ -22,7 +22,7 @@ public class PriorityQueue {
     /// <param name="priority">The priority</param>
     public void Enqueue(string value, int priority) {
         var newNode = new PriorityItem(value, priority);
-        _queue.Add(newNode);
+        _queue.Add(newNode); 
     }
 
     public String Dequeue() {
