@@ -27,7 +27,7 @@ public static class TakingTurns {
         // Console.WriteLine(players);    // This can be un-commented out for debug help
         while (players.Length > 0)
             players.GetNextPerson();
-        // Defect(s) Found: 
+        // Defect(s) Found: This had used a FIFO instead of a LIFO order.
 
         Console.WriteLine("---------");
 
@@ -50,7 +50,8 @@ public static class TakingTurns {
         while (players.Length > 0)
             players.GetNextPerson();
 
-        // Defect(s) Found: 
+        // Defect(s) Found: I forgot to record the defect that I found. I can't remember 
+        //                  anymore, but it is fixed now.
 
         Console.WriteLine("---------");
 
