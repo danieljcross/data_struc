@@ -6,9 +6,11 @@ Data structures are ways of organizing code in ways that increase efficiency. Th
 
 The way in which the efficiency is measured is using the Big O notation. What this does is looks at the worse case scenario of how long it could take to look through the data, and reduces it to the following measurements:
 
-* O(1) - This is the most efficient method. It will take the same amount of time each time. It is constant, represented with the black line.
+* O(1) - This is the most efficient method. It will take the same amount of time each time. It is constant, represented with the red line.
 * O(n) - This depends on the variable with how long it would take. It is linear, represented with the blue line. 
-* O(n²) - This will take the variable and multiply it with itself, taking much longer with larger variables. It is exponential, represented with the red line. 
+* O(n²) - This will take the variable and multiply it with itself, taking much longer with larger variables. It is exponential, represented with the green line. 
+
+The x-axis represents the data size, and the y-axis represents how much time it will take.
 
 ![Image](images/big_o_graph.png)
 
