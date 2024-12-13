@@ -12,7 +12,7 @@ The way in which the efficiency is measured is using the Big O notation. What th
 
 ![Image](images/big_o_graph.png)
 
-This tutorial will cover three common data structures used in programming.
+This tutorial will cover three common data structures used in programming, and their respective Big O notations. 
 
 ## II. Queue
 
