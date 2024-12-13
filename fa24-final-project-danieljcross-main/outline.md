@@ -10,7 +10,7 @@ The way in which the efficiency is measured is using the Big O notation. What th
 * O(n) - This depends on the variable with how long it would take. It is linear, represented with the blue line. 
 * O(n²) - This will take the variable and multiply it with itself, taking much longer with larger variables. It is exponential, represented with the green line. 
 
-The x-axis represents the data size, and the y-axis represents how much time it will take.
+The x-axis represents the data size, and the y-axis represents how much time it could take (based on the worst case scenario).
 
 ![Image](images/big_o_graph.png)
 
