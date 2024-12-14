@@ -4,7 +4,7 @@
 
 Data structures are ways of organizing code in ways that increase efficiency. They are often used when organizing or looking through large amounts of data.
 
-The way in which the efficiency is measured is using the Big O notation. What this does is looks at the worse case scenario of how long it could take to look through the data, and reduces it to the following measurements:
+The way in which the efficiency is measured is using the Big O notation. What this does is looks at the worse case scenario of how long it could take to look through or add something to the data. It ignores coeffiecients and constants (unless it is just constant, which is represented as 1). They are reduced to the following measurements:
 
 * O(1) - This is the most efficient method. It will take the same amount of time each time. It is constant, represented with the red line.
 * O(n) - This depends on the variable with how long it would take. It is linear, represented with the blue line. 
@@ -34,15 +34,23 @@ A hamburger restaurant wants to implement a FIFO rule so that there isn't one cu
 
 Once you have completed, please compare your answer with the [Sample Solution](https://github.com/danieljcross/data_struct/tree/master/fa24-final-project-danieljcross-main/ds1-solution) before submitting a link to your personal GitHub repository. 
 
-## III. Set or Linked List *(pick one)*
+## III. Set
 
-* Introduction
-* ...
-* *(replace these lines with headings that you'd use to teach this data structure)*
-* ...
-* Efficiency of common operations
-* Example Problem
-* Problem to Solve
+A set is a data structure that does not allow duplicate values. It does this efficiently by giving each piece of data a hash code, assigning it to a specific "bucket." When adding a piece of data, it looks for that piece of data in the bucket that it would belong to. If it already exists, it does not add it again. Otherwise it adds it to that bucket. 
+
+An example of a use for this (from my own personal life) could be to help manage a wedding invite list. If Daniel and Emma each create their own invite list, they might each include their mutual friends. However, those friends should not get two invites. Running the data through a set will allow them to verify that each person only gets one invite, even if they are on both lists. 
+
+See [this example](https://github.com/danieljcross/data_struct/tree/master/fa24-final-project-danieljcross-main/ds2-example) of how this could be coded in C#. 
+
+Big O: O(n)
+
+The big O can be kind of complicated with this one. When determining which bucket a piece of data should go into, there is a set algorithm to decide, which means that uses O(1). However, it has to search through every piece of data within that bucket. So the worst case scenario is 0(n) if all of the data somehow ends up in one bucket. However, good planning can still make buckets useful with some situations. 
+
+Your task:
+
+You have 13 playing cards. You know they are all hearts, but you are not sure if there are duplicates or not. In order to make sure you have one of each card in the suite (A, 2-10, J, Q, K), you decide to enter each of your cards into a set. Please do so and update your code into [Problem 2](https://github.com/danieljcross/data_struct/tree/master/fa24-final-project-danieljcross-main/ds2-problem) to prove that you indeed have one of each card. Keep in mind that the data has already been entered for you. You must write the code that will look through the set to see if of the cards are missing. It should display any missing cards. 
+
+Once you have completed, please compare your answer with the [Sample Solution](https://github.com/danieljcross/data_struct/tree/master/fa24-final-project-danieljcross-main/ds2-solution) before submitting a link to your personal GitHub repository. 
 
 ## IV. Tree
 
