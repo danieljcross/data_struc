@@ -1,4 +1,3 @@
-// WeddingInvite.cs
 using System.Collections.Generic;
 
 class WeddingInvite{

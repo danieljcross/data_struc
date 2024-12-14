@@ -1,5 +1,4 @@
-﻿// Program.cs
-using System;
+﻿using System;
 
 class Program{
     static void Main(string[] args){
